@@ -32,6 +32,10 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -267,6 +271,10 @@ ul {
 }
 /* END задаёт расположение элементов секции по гриду */
 
+.design__interior-img {
+  grid-column: 2/-1;
+}
+
 .design__cell-text {
   margin-bottom: 15px;
 }
@@ -320,6 +328,7 @@ ul {
 .design__img {
   max-width: 100%;
   display: block;
+  margin: 0 auto;
 }
 
 /* FOOTER STYLES */
@@ -333,4 +342,131 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 300px;
+}
+
+/* АДАПТИВЫ */
+
+/* для ширины меньше 1366px */
+
+@media (max-width: 1366px) {
+  .footer__inner {
+    height: 150px;
+  }
+}
+
+/* для ширины меньше 1020px */
+
+@media (max-width: 1020px) {
+  .design__interior {
+    display: block;
+  }
+  .design__interior-img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .design__cell-three .design__interior-img {
+    min-width: 100%;
+    width: auto;
+  }
+}
+
+/* для ширины меньше 768px */
+
+@media (max-width: 768px) {
+  .header__logo {
+    margin-left: 0;
+  }
+  .logo__img {
+    width: 180px;
+  }
+  .list__item + .list__item {
+    margin-left: 15px;
+  }
+  .list__link {
+    width: 35px;
+    height: 35px;
+  }
+  .title {
+    font-size: 55px;
+  }
+  .title-descr {
+    font-size: 18px;
+  }
+  .concept {
+    padding-top: 75px;
+    margin-bottom: 75px;
+  }
+  .concept__text {
+    font-size: 16px;
+  }
+  .premier__inner {
+    display: block;
+  }
+  .premier,
+  .video {
+    margin-bottom: 75px;
+  }
+  .premier__img {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .design__box {
+    margin: 75px auto;
+    display: block;
+  }
+  .design__box-column {
+    width: 100%;
+  }
+}
+
+/* для ширины меньше 620px */
+
+@media (max-width: 620px) {
+  .footer__inner {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .footer .list {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .slick-track {
+    margin-left: 0;
+  }
+}
+
+/* для ширины меньше 520px */
+
+@media (max-width: 520px) {
+  .header__top {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .footer__inner {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  .list {
+    justify-content: center;
+    padding-top: 10px;
+    width: 100%;
+  }
+  .title {
+    font-size: 34px;
+  }
+  .slick-track {
+    margin-left: 0;
+  }
+}
+
+/* для ширины меньше 360px */
+
+@media (max-width: 360px) {
+  .design-slider__item {
+    margin: 0;
+  }
+  .slick-track {
+    margin-left: 0;
+  }
 }
